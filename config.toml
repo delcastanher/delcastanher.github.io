@@ -1,0 +1,4 @@
+baseURL = "https://delcastanher.github.io/"
+languageCode = "en-us"
+title = "Delcastanher's Memory Allocation"
+theme = "PaperMod"
