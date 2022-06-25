@@ -2,3 +2,22 @@ baseURL = "https://delcastanher.github.io/"
 languageCode = "en-us"
 title = "Delcastanher's Memory Allocation"
 theme = "PaperMod"
+
+[params.homeInfoParams]
+Title = "What I am learning around there"
+Content = """
+Once an idea has taken hold of the brain, it’s almost impossible to eradicate.
+
+From Inception.
+
+The site theme needed something written here :P
+"""
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/delcastanher/"
+[[params.socialIcons]]
+name = "telegram"
+url = "https://t.me/delcastanher"
+[[params.socialIcons]]
+name = "other"
+url = "https://www.delcastanher.com.br/"

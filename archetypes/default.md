@@ -1,6 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
+summary: Read Install and Update instructions here
 date: {{ .Date }}
-draft: true
+tags: ["Hugo", "GitHub"]
+author: "Ricardo Delcastanher"
 ---
 
