@@ -69,7 +69,7 @@ To test the site, run `hugo server -D` and navigate to [http://localhost:1313/](
 
 ## Step 6: Build Hugo With GitHub Action
 
-GitHub executes your software development workflows. Everytime you push your code on the Github repository, Github Actions will build the site automatically [^3].
+GitHub executes your software development workflows. Everytime you push your code on the Github repository, Github Actions will build the site automatically.[^3]
 
 [^3]: https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action
 
