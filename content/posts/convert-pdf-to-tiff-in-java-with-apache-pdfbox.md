@@ -23,7 +23,7 @@ author: "Ricardo Delcastanher"
 
 ## Convert each PDF page as a separated Tiff file
 
-For the following pieces of code, you will need a `String` variable `pdfFilename` with the path and name of the PDF file[^1]. It will be used to load the PDF file and write the Tiff files.
+For the following pieces of code, you will need a `String` variable `pdfFilename` with the path and name of the PDF file. [^1] It will be used to load the PDF file and write the Tiff files.
 
 [^1]: https://pdfbox.apache.org/2.0/migration.html#working-with-images
 
@@ -48,7 +48,7 @@ document.close();
 
 ## Convert a multi-page PDF into a multi-page Tiff
 
-You can write multi-page images (in formats that support it, like Tiff) using the standard `ImageIO` API **starting from Java 9**[^2].
+You can write multi-page images (in formats that support it, like Tiff) using the standard `ImageIO` API **starting from Java 9**. [^2]
 
 [^2]: https://stackoverflow.com/a/41038987
 

@@ -8,7 +8,7 @@ author: "Ricardo Delcastanher"
 
 You are looking for Java libraries to solve a particular demand, and you need to test them without polluting your current project. Still, you don't want to configure a Java framework too.
 
-## Step 1: Create the simplest Maven project[^1]
+## Step 1: Create the simplest Maven project [^1]
 
 [^1]: https://maven.apache.org/guides/getting-started/index.html#how-do-i-make-my-first-maven-project
 
@@ -21,7 +21,7 @@ cd my-app
 
 And program the needed code.
 
-## Step 3: [Add the plugin](https://maven.apache.org/guides/getting-started/index.html#how-do-i-use-plugins) to `pom.xml` file[^2]
+## Step 3: [Add the plugin](https://maven.apache.org/guides/getting-started/index.html#how-do-i-use-plugins) to `pom.xml` file [^2]
 
 [^2]: https://stackoverflow.com/questions/574594/how-can-i-create-an-executable-jar-with-dependencies-using-maven
 

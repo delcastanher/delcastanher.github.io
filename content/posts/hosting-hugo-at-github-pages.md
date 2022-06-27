@@ -11,7 +11,7 @@ author: "Ricardo Delcastanher"
 ## Step 1: Create a repository
 Head over to [GitHub](https://github.com/) and [create a new public repository](https://github.com/new) named ***username***.github.io, where ***username*** is your username (or organization name) on GitHub.
 
-If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right.[^1]
+If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right. [^1]
 
 [^1]: https://pages.github.com/
 
@@ -43,7 +43,7 @@ hugo new site . --force
 ```
 
 ## Step 4: Add a Theme
-See [themes.gohugo.io](https://themes.gohugo.io/) for a list of themes to consider. This quickstart uses the beautiful [Ananke theme](https://themes.gohugo.io/gohugo-theme-ananke/)  [^2].
+See [themes.gohugo.io](https://themes.gohugo.io/) for a list of themes to consider. This quickstart uses the beautiful [Ananke theme](https://themes.gohugo.io/gohugo-theme-ananke/). [^2]
 
 [^2]: https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme
 
@@ -69,7 +69,7 @@ To test the site, run `hugo server -D` and navigate to [http://localhost:1313/](
 
 ## Step 6: Build Hugo With GitHub Action
 
-GitHub executes your software development workflows. Everytime you push your code on the Github repository, Github Actions will build the site automatically.[^3]
+GitHub executes your software development workflows. Everytime you push your code on the Github repository, Github Actions will build the site automatically. [^3]
 
 [^3]: https://gohugo.io/hosting-and-deployment/hosting-on-github/#build-hugo-with-github-action
 
