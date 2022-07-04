@@ -1,6 +1,6 @@
 ---
 title: "Convert PDF to Tiff in Java with Apache PDFBox"
-summary: One image file per PDF page and multiple pages image file
+summary: One image file per PDF page and multiple pages image file.
 date: 2022-06-26T17:49:21-03:00
 tags: ["Java"]
 author: "Ricardo Delcastanher"
