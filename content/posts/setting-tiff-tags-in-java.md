@@ -81,13 +81,25 @@ private static IIOMetadataNode createRationalField(int number, String name, int 
 
 There is one method for [each Tiff tag type](https://www.loc.gov/preservation/digital/formats/content/tiff_tags.shtml).
 
-Let's take the **DocumentName** Tiff tag as an example. As you can see on https://www.awaresystems.be/imaging/tiff/tifftags/documentname.html it has:
--   Type: ASCII
+Let's take the **DocumentName** Tiff tag as an example. Suppose you want to add this tag to your Tiff file. As you can see on https://www.awaresystems.be/imaging/tiff/tifftags/documentname.html it has:
+-   Type: **ASCII**
     -   So you need to use the `createAsciiField()` method
--   Code: 269
+-   Code: **269**
     -   This is the first `createAsciiField()` parameter
--   Name: DocumentName
+-   Name: **DocumentName**
     -   This is the second `createAsciiField()` parameter
 -   The third `createAsciiField()` parameter is the value you want inside the tag. In this case, the value inside the **DocumentName** tag.
 
-You can use the logic above for all other tags and repeat the sixth line for each tag chosen.
+```Java
+ifd.appendChild(createAsciiField(269, "DocumentName", "My Document Name"));
+```
+
+You can use the logic above for all other tags and repeat the sixth line for each tag chosen before the `metadata.mergeTree(metaDataFormat, root);` call.
+
+Once the `IIOMetadata metadata` object is created, you can pass it as the third parameter of the [`IIOImage`](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/IIOImage.html) constructor, that in turn, is the first parameter of [`javax.imageio.ImageWriter.write()`](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/ImageWriter.html#write(javax.imageio.metadata.IIOMetadata,javax.imageio.IIOImage,javax.imageio.ImageWriteParam)) and [`javax.imageio.ImageWriter.writeToSequence()`](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/ImageWriter.html#writeToSequence(javax.imageio.IIOImage,javax.imageio.ImageWriteParam)).
+
+In our [Convert a multi-page PDF into a multi-page Tiff](/posts/convert-pdf-to-tiff-in-java-with-apache-pdfbox/) example, the `writeToSequence()` call now should be:
+
+```Java
+writer.writeToSequence(new IIOImage(bim, null, metadata), null);
+```
