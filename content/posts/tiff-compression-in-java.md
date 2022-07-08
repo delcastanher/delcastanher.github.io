@@ -6,7 +6,7 @@ tags: ["Java"]
 author: "Ricardo Delcastanher"
 ---
 
-When [writing a Tiff file using the standard ImageIO API in Java](/posts/convert-pdf-to-tiff-in-java-with-apache-pdfbox/#convert-a-multi-page-pdf-into-a-multi-page-tiff), you must initialize a `TIFFImageWriter` variable.
+When [writing a Tiff file using the standard ImageIO API in Java](/posts/convert-pdf-to-tiff-in-java-with-apache-pdfbox/#convert-a-multi-page-pdf-into-a-multi-page-tiff), you must initialize a `TIFFImageWriter` object.
 
 ```Java
 ImageWriter writer = ImageIO.getImageWritersByFormatName("TIFF").next();

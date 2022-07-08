@@ -41,7 +41,7 @@ document.close();
 
 -   Note that the page number parameter is zero based.
 -   The `renderImageWithDPI` third parameter accepts the following values:
-    -   `ImageType.RGB`, `ImageType.ARGB` and `ImageType.BGR` for coloured images;
+    -   `ImageType.RGB`, `ImageType.ARGB` and `ImageType.BGR` for colored images;
     -   `ImageType.GRAY` for grayscale images;
     -   `ImageType.BINARY` for pure black and white images.
 -   The suffix in `ImageIOUtil.writeImage` second parameter will be used as the file format.
@@ -73,6 +73,6 @@ document.close();
 
 -   Note that the page number parameter is zero based.
 -   The `renderImageWithDPI` third parameter accepts the following values:
-    -   `ImageType.RGB`, `ImageType.ARGB` and `ImageType.BGR` for coloured images;
+    -   `ImageType.RGB`, `ImageType.ARGB` and `ImageType.BGR` for colored images;
     -   `ImageType.GRAY` for grayscale images;
     -   `ImageType.BINARY` for pure black and white images.
