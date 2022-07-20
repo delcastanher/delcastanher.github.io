@@ -47,3 +47,7 @@ param.setCompressionType("CCITT T.4");
 ```
 
 Now, pass the `TIFFImageWriter` created as the third parameter when using [`javax.imageio.ImageWriter.write()`](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/ImageWriter.html#write(javax.imageio.metadata.IIOMetadata,javax.imageio.IIOImage,javax.imageio.ImageWriteParam)) for single page Tiff, or as the second parameter when using [`javax.imageio.ImageWriter.writeToSequence()`](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/ImageWriter.html#writeToSequence(javax.imageio.IIOImage,javax.imageio.ImageWriteParam)) while creating multi-pages Tiff.
+
+TIFF uses lossless compression [^2], so [`ImageWriteParam.getCompressionQuality()`](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/ImageWriteParam.html#getCompressionQuality()) will always return the highest quality value.
+
+[^2]: https://stackoverflow.com/a/13908410
