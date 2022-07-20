@@ -6,7 +6,7 @@ tags: ["Java"]
 author: "Ricardo Delcastanher"
 ---
 
-[PDFBox](https://pdfbox.apache.org/) uses [Java AWT RenderingHints](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/RenderingHints.html) before converting a PDF page to a [`BufferedImage`](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/image/BufferedImage.html) object. Of the eleven options `RenderingHints` offers, PDFBox uses only three, as follows, and can be checked at [PDFBox's `PDFRenderer` class](https://github.com/apache/pdfbox/blob/trunk/pdfbox/src/main/java/org/apache/pdfbox/rendering/PDFRenderer.java).
+[PDFBox](https://pdfbox.apache.org/) uses [Java AWT RenderingHints](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/RenderingHints.html) before converting a PDF page to a [`BufferedImage`](https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/java/awt/image/BufferedImage.html) object. Of the eleven options `RenderingHints` offers, PDFBox uses only three, as follows, and can be checked at [PDFBox's `PDFRenderer` class](https://github.com/apache/pdfbox/blob/trunk/pdfbox/src/main/java/org/apache/pdfbox/rendering/PDFRenderer.java#L520).
 
 ## `KEY_INTERPOLATION`
 The INTERPOLATION hint controls how image pixels are filtered or resampled during an image rendering operation.
@@ -25,7 +25,7 @@ The ANTIALIASING hint controls whether or not the geometry rendering methods of 
 
 PDFBox uses the **`VALUE_ANTIALIAS_OFF`**, rendering is done without antialiasing.
 
-### For knowledge, the other `RenderingHints` keys available are:
+### The other `RenderingHints` keys available are:
 -   `KEY_DITHERING`
 -   `KEY_TEXT_ANTIALIASING`
 -   `KEY_TEXT_LCD_CONTRAST`
@@ -34,3 +34,15 @@ PDFBox uses the **`VALUE_ANTIALIAS_OFF`**, rendering is done without antialiasin
 -   `KEY_COLOR_RENDERING`
 -   `KEY_STROKE_CONTROL`
 -   `KEY_RESOLUTION_VARIANT`
+
+If you want to modify the default PDFBox values or use other RenderingHints keys, you should create a new `RenderingHints` object and set it into [PDFRenderer](/posts/convert-pdf-to-tiff-in-java-with-apache-pdfbox/) with its `setRenderingHints` method.
+
+```Java
+RenderingHints r = new RenderingHints(null);
+r.put(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
+r.put(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
+r.put(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+PDFRenderer pdfRenderer = new PDFRenderer(document);
+pdfRenderer.setRenderingHints(r);
+```
