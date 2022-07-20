@@ -103,3 +103,7 @@ In our [Convert a multi-page PDF into a multi-page Tiff](/posts/convert-pdf-to-t
 ```Java
 writer.writeToSequence(new IIOImage(bim, null, metadata), null);
 ```
+
+### Other options
+-   https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/metadata/doc-files/tiff_metadata.html
+-   https://github.com/ngageoint/tiff-java
