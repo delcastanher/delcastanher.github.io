@@ -14,13 +14,15 @@ To convert to **grayscale**, for each pixel, you take these Red, Green and Blue 
 
 [^2]: https://dyclassroom.com/image-processing-project/how-to-convert-a-color-image-into-grayscale-image-in-java
 
-Converting to pure **black and white** is similar, but you use the average result to decide when to store 0 (black) if the value is greater than 127 (that is the result for `255/2`) or to store 255 (white) if less than 127. [^3]
+Converting to pure **black and white** is similar, but you use the average result to decide when to store 0 (black) if the value is greater than 127 (that is the result for `255/2`) or to store 255 (white) if less than 127. [^3] The result can be suboptimal, particularly if the page background is of uneven darkness. [^4]
 
 [^3]: https://stackoverflow.com/a/17482430
 
-The normalized color coordinate transformations used for the default CMYK color space are defined as follows: [^4]
+[^4]: https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html#binarisation
 
-[^4]: https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/metadata/doc-files/tiff_metadata.html#ColorSpacesRead
+The normalized color coordinate transformations used for the default CMYK color space are defined as follows: [^5]
+
+[^5]: https://docs.oracle.com/en/java/javase/11/docs/api/java.desktop/javax/imageio/metadata/doc-files/tiff_metadata.html#ColorSpacesRead
 
 **Linear RGB to CMYK**
 ```Mathematica
@@ -41,6 +43,6 @@ G = (1 - K)*(1 - M)
 B = (1 - K)*(1 - Y)
 ```
 
-**In Java**, you can do all of this using `ImageIO` [^5] or a library such as [Marvin Image Processing Framework](http://marvinproject.sourceforge.net/en/index.html).
+**In Java**, you can do all of this using `ImageIO` [^6] or a library such as [Marvin Image Processing Framework](http://marvinproject.sourceforge.net/en/index.html).
 
-[^5]: https://memorynotfound.com/convert-image-black-white-java/
+[^6]: https://memorynotfound.com/convert-image-black-white-java/
