@@ -75,9 +75,6 @@ Now that your image has only white and black values, you can use a `TYPE_BYTE_BI
 ```Java
 BufferedImage bwBufferedImage = new BufferedImage(bufferedImage.getWidth(), bufferedImage.getHeight(), BufferedImage.TYPE_BYTE_BINARY);
 Graphics2D graphics2D = bwBufferedImage.createGraphics();
-try {
-    graphics2D.drawImage(bim, 0, 0, bufferedImage.getWidth(), bufferedImage.getHeight(), null);
-} finally {
-    graphics2D.dispose();
-}
+graphics2D.drawImage(bim, 0, 0, bufferedImage.getWidth(), bufferedImage.getHeight(), null);
+graphics2D.dispose();
 ```
