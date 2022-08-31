@@ -29,7 +29,7 @@ for (int y = 0; y < (bufferedImage.getHeight()); y++) {
 }
 ```
 
-Copy the [Auto Threshold]((https://imagej.net/plugins/auto-threshold)) method of your choice from https://github.com/fiji/Auto_Threshold/blob/master/src/main/java/fiji/threshold/Auto_Threshold.java to your project and pass your `histogram` as a parameter.
+Copy the [Auto Threshold](https://imagej.net/plugins/auto-threshold) method of your choice from https://github.com/fiji/Auto_Threshold/blob/master/src/main/java/fiji/threshold/Auto_Threshold.java to your project and pass your `histogram` as a parameter.
 -  [IJDefault](https://github.com/fiji/Auto_Threshold/blob/master/src/main/java/fiji/threshold/Auto_Threshold.java#L409)
 -  [Huang](https://github.com/fiji/Auto_Threshold/blob/master/src/main/java/fiji/threshold/Auto_Threshold.java#L447)
 -  [Huang2](https://github.com/fiji/Auto_Threshold/blob/master/src/main/java/fiji/threshold/Auto_Threshold.java#L533)
