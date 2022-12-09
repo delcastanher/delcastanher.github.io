@@ -92,7 +92,7 @@
 </span></span><span style=display:flex><span>        Mat destination <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Mat<span style=color:#f92672>(</span>source<span style=color:#f92672>.</span><span style=color:#a6e22e>rows</span><span style=color:#f92672>(),</span> source<span style=color:#f92672>.</span><span style=color:#a6e22e>cols</span><span style=color:#f92672>(),</span> source<span style=color:#f92672>.</span><span style=color:#a6e22e>type</span><span style=color:#f92672>());</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        destination <span style=color:#f92672>=</span> source<span style=color:#f92672>;</span>
-</span></span><span style=display:flex><span>        threshold<span style=color:#f92672>(</span>source<span style=color:#f92672>,</span> destination<span style=color:#f92672>,</span> 127<span style=color:#f92672>,</span> 255<span style=color:#f92672>,</span> THRESH_TOZERO<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        threshold<span style=color:#f92672>(</span>source<span style=color:#f92672>,</span> destination<span style=color:#f92672>,</span> <span style=color:#ae81ff>127</span><span style=color:#f92672>,</span> <span style=color:#ae81ff>255</span><span style=color:#f92672>,</span> THRESH_TOZERO<span style=color:#f92672>);</span>
 </span></span><span style=display:flex><span>        imwrite<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;ThreshZero.jpg&#34;</span><span style=color:#f92672>,</span> destination<span style=color:#f92672>);</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
