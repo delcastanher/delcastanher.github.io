@@ -12,12 +12,12 @@ Instead of using your IDE to debug each document page as objects and properties 
 
 ## Apache PDFBox 2.0
 - Download [pdfbox-app-2.0.30.jar](https://dlcdn.apache.org/pdfbox/2.0.30/pdfbox-app-2.0.30.jar)
-- Run `java -jar pdfbox-app-2.y.z.jar PDFDebugger [inputfile]` [^1]
+- Run `java -jar pdfbox-app-2.0.30.jar PDFDebugger [inputfile]` [^1]
 
 [^1]: https://pdfbox.apache.org/2.0/commandline.html#pdfdebugger
 
 ## Apache PDFBox 3.0
 - Download [pdfbox-app-3.0.1.jar](https://dlcdn.apache.org/pdfbox/3.0.1/pdfbox-app-3.0.1.jar)
-- Run `java -jar pdfbox-app-3.y.z.jar debug [inputfile]` [^2]
+- Run `java -jar pdfbox-app-3.0.1.jar debug [inputfile]` [^2]
 
 [^2]: https://pdfbox.apache.org/3.0/commandline.html#pdfdebugger
